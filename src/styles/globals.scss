@@ -1,0 +1,30 @@
+@import '../../node_modules/codyhouse-framework/main/assets/css/base';
+@import 'custom-style';
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+body {
+    --body-line-height: font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    background: var(--color-bg);
+    line-height: var(--body-line-height);
+    color: var(--paragraphTextColor);
+    -webkit-font-smoothing: antialiased;
+}
+
+[data-theme="dark"] body {}
+
+h1 {
+    color: var(--color-primary);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.container>* {
+    width: 100%;
+    max-width: 700px;
+}
