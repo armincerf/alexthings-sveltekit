@@ -1,6 +1,5 @@
 <script context="module">
 	import { client, options } from './../../utils/client';
-	import PrismicDom from 'prismic-dom';
 
 	export async function load() {
 		const document = await client.getByUID('page', 'homepage', options);
@@ -13,7 +12,7 @@
 </script>
 
 <script>
-	export let document = { data: { title: 'Loading...' } };
+	export let document;
 </script>
 
 <main>
@@ -52,7 +51,7 @@
 	</div>
 	<div class="container">
 		<div class="text">
-			{@html PrismicDom.RichText.asHtml(document.data.content)}
+			{document.data.content}
 		</div>
 	</div>
 </main>

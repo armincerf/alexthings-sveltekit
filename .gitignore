@@ -4,3 +4,4 @@ node_modules
 /build
 /functions
 .vercel
+.vercel_build_output

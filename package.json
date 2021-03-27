@@ -11,8 +11,8 @@
     "devDependencies": {
         "@prismicio/client": "^4.0.0",
         "@sveltejs/adapter-node": "next",
-        "@sveltejs/adapter-vercel": "next",
         "@sveltejs/kit": "next",
+        "@types/prismic-dom": "^2.1.1",
         "@typescript-eslint/eslint-plugin": "^4.19.0",
         "@typescript-eslint/parser": "^4.19.0",
         "eslint": "^7.22.0",
@@ -33,6 +33,9 @@
         "node": ">= 12.17.0"
     },
     "dependencies": {
-        "codyhouse-framework": "^2.8.6"
+        "codyhouse-framework": "^2.8.6",
+        "@sveltejs/adapter-vercel": "next",
+        "@sveltejs/app-utils": "^1.0.0-next.0"
+
     }
 }

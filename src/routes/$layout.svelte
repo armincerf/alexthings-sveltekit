@@ -1,12 +1,15 @@
 <script>
+	import { onMount } from 'svelte';
 	import './../styles/reset.scss';
 	import './../styles/globals.scss';
-	document.getElementsByTagName('html')[0].className += ' js';
-	let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-	document.documentElement.setAttribute('data-theme', theme);
-	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-		theme = e.matches ? 'dark' : 'light';
+	onMount(async () => {
+        document.getElementsByTagName('html')[0].className += ' js';
+		let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 		document.documentElement.setAttribute('data-theme', theme);
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+			theme = e.matches ? 'dark' : 'light';
+			document.documentElement.setAttribute('data-theme', theme);
+		});
 	});
 </script>
 
